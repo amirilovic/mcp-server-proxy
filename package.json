@@ -1,0 +1,40 @@
+{
+  "name": "mcp-server-proxy",
+  "version": "1.0.0",
+  "description": "MCP Server implementation in TypeScript",
+  "main": "dist/server.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev:sse:developer": "tsx src/server.ts --mode sse --port 8080 --profile developer",
+    "dev:stdio:developer": "tsx src/server.ts --profile developer",
+    "dev:sse:default": "tsx src/server.ts --mode sse --port 8080",
+    "dev:stdio:default": "tsx src/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "inspect": "npx @modelcontextprotocol/inspector tsx src/server.ts --profile developer"
+  },
+  "keywords": [
+    "mcp",
+    "server",
+    "typescript"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/content-type": "^1.1.8",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.1",
+    "@types/node": "^20.11.24",
+    "tsx": "^4.19.3",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.8.0",
+    "commander": "^13.1.0",
+    "content-type": "^1.0.5",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "raw-body": "^3.0.0"
+  }
+}
